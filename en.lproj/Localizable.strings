@@ -6,3 +6,72 @@
   
 */
 
+// Название банок
+"Banka_necessary" = "Necessary";
+"Banka_entertainment" = "Entertainment";
+"Banka_investment" = "Investment";
+"Banka_education" = "Education";
+"Banka_reserve" = "Reserve";
+"Banka_charity" = "Charity";
+
+// Название категорий дохода
+"Income_work" = "Salary";
+"Income_business" = "Business";
+"Income_other" = "Other";
+
+// Название категорий расхода
+"Outcome_products" = "Products";
+"Outcome_medications" = "Pills";
+"Outcome_credit" = "Credit";
+"Outcome_auto" = "Auto";
+"Outcome_payments" = "Payments";
+"Outcome_cloth" = "Clothes";
+"Outcome_transport" = "Transport";
+"Outcome_apartment" = "Apartment";
+"Outcome_child" = "Children";
+"Outcome_education" = "Education";
+"Outcome_charity" = "Charity";
+"Outcome_gift" = "Gift";
+"Outcome_entertainment" = "Entertainment";
+
+// Валюты
+"currency_kzt" = "Tenge";
+"currency_rub" = "Ruble";
+"currency_kgs" = "Kyrgyzstani som";
+"currency_uzs" = "Uzbek sum";
+"currency_byn" = "Belarusian ruble";
+"currency_uah" = "Ukrainian hryvnia";
+"currency_usd" = "Dollar";
+"currency_eur" = "Euro";
+
+// Onboarding 1
+"onb_one_title" = "Managing your finance is not as difficult as you think";
+"onb_one_description" = "It's even easier with Banka";
+"onb_one_choose_currency" = "Select currency";
+
+// Onboarding 2
+"onb_two_title" = "Choose a currency for further work with it";
+"onb_two_description" = "Can be changed later in the app settings";
+"onb_two_save" = "Save and next";
+
+// Onboarding 3
+"onb_three_necessary_title" = "Necessary";
+"onb_three_necessary_description" = "Food, utility bills, loans, medicines, transportation, medicine, etc.";
+
+"onb_three_entertainment_title" = "Entertainment";
+"onb_three_entertainment_description" = "Massage, cafe, restaurant, concert, theater, computer club, hookah, etc.";
+
+"onb_three_investment_title" = "Investment";
+"onb_three_investment_description" = "Used for investment and passive income";
+
+"onb_three_education_title" = "Education";
+"onb_three_education_description" = "Payment for education, courses, master classes, trainings, books, online courses, etc.";
+
+"onb_three_reserve_title" = "Reserve";
+"onb_three_reserve_description" = "Financial airbag (reserve fund) and saving for large expenses";
+
+"onb_three_charity_title" = "Charity";
+"onb_three_charity_description" = "Use for charity purposes or as gifts to friends, relatives, neighbors";
+
+"onb_three_start" = "Leeet's go!";
+
