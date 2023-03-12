@@ -60,14 +60,14 @@ struct ToastView: View {
                     Text(message)
                         .foregroundColor(.cWhite)
                         .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(Color.cGray)
+                        .foregroundColor(Color.cWhite)
                 }
                 
                 Spacer()
             }
             .padding(12)
         }
-        .background(Color.cDarkGray)
+        .background(Color.cBackLight)
         .frame(minWidth: 0, maxWidth: .infinity)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.25), radius: 4, x: 0, y: 1)

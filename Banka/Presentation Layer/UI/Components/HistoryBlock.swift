@@ -25,8 +25,18 @@ struct HistoryBlock: View {
     var incomeView: some View {
         VStack {
             HStack {
+                ZStack {
+                    Circle()
+                        .fill(Color.cGray)
+                    Image(systemName: "arrow.down.left")
+                        .foregroundColor(Color.cWhite)
+                        .font(.system(size: 16, weight: .medium))
+                }
+                .frame(width: 40, height: 40)
+                .padding(.trailing, 8)
+                
                 VStack(alignment: .leading) {
-                    Text(history.from)
+                    Text(history.fromIncome?.title ?? "")
                         .foregroundColor(.cWhite)
                         .font(.system(size: 16, weight: .black))
                         .padding(.bottom, 2)
@@ -36,10 +46,10 @@ struct HistoryBlock: View {
                 
                 VStack(alignment: .trailing) {
                     Text("+\(history.amount.toZero)\(userDefaults.currentCurrency)")
-                        .foregroundColor(.green)
+                        .foregroundColor(.cGreen)
                         .font(.system(size: 16, weight: .black))
                         .padding(.bottom, 2)
-                    Text(history.date)
+                    Text(history.date.toDBString())
                         .foregroundColor(.cGray)
                         .font(.system(size: 14, weight: .medium))
                 }
@@ -56,13 +66,23 @@ struct HistoryBlock: View {
     var outcomeView: some View {
         VStack {
             HStack {
+                ZStack {
+                    Circle()
+                        .fill(Color.cGray)
+                    Image(systemName: "arrow.up.right")
+                        .foregroundColor(Color.cWhite)
+                        .font(.system(size: 16, weight: .medium))
+                }
+                .frame(width: 40, height: 40)
+                .padding(.trailing, 8)
+                
                 VStack(alignment: .leading) {
-                    Text(history.from)
+                    Text(history.fromBanka?.title ?? "")
                         .foregroundColor(.cWhite)
                         .font(.system(size: 16, weight: .black))
                         .padding(.bottom, 2)
-                    Text(history.category ?? "")
-                        .foregroundColor(.cWhite)
+                    Text(history.toCategory?.title ?? "")
+                        .foregroundColor(.cGray)
                         .font(.system(size: 14, weight: .medium))
                 }
                 
@@ -70,10 +90,10 @@ struct HistoryBlock: View {
                 
                 VStack(alignment: .trailing) {
                     Text("-\(history.amount.toZero)\(userDefaults.currentCurrency)")
-                        .foregroundColor(.red)
+                        .foregroundColor(.cCoral)
                         .font(.system(size: 16, weight: .black))
                         .padding(.bottom, 2)
-                    Text(history.date)
+                    Text(history.date.toDBString())
                         .foregroundColor(.cGray)
                         .font(.system(size: 14, weight: .medium))
                 }
@@ -90,14 +110,24 @@ struct HistoryBlock: View {
     var transferView: some View {
         VStack {
             HStack {
+                ZStack {
+                    Circle()
+                        .fill(Color.cGray)
+                    Image(systemName: "arrow.up.arrow.down")
+                        .foregroundColor(Color.cWhite)
+                        .font(.system(size: 16, weight: .medium))
+                }
+                .frame(width: 40, height: 40)
+                .padding(.trailing, 8)
+                
                 VStack(alignment: .leading) {
-                    Text("C: \(history.from)")
+                    Text("C: \(history.fromBanka?.title ?? "")")
                         .foregroundColor(.cWhite)
                         .font(.system(size: 16, weight: .black))
                         .padding(.bottom, 2)
                     
-                    Text("На: \(history.to ?? "")")
-                        .foregroundColor(.cWhite)
+                    Text("На: \(history.toBanka?.title ?? "")")
+                        .foregroundColor(.cGray)
                         .font(.system(size: 14, weight: .medium))
                 }
                 
@@ -105,10 +135,10 @@ struct HistoryBlock: View {
                 
                 VStack(alignment: .trailing) {
                     Text("\(history.amount.toZero)\(userDefaults.currentCurrency)")
-                        .foregroundColor(.orange)
+                        .foregroundColor(.cOrange)
                         .font(.system(size: 16, weight: .black))
                         .padding(.bottom, 2)
-                    Text(history.date)
+                    Text(history.date.toDBString())
                         .foregroundColor(.cGray)
                         .font(.system(size: 14, weight: .medium))
                 }

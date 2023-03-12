@@ -12,8 +12,9 @@ struct HistoryModel: Codable, Hashable, Identifiable {
     let id: String
     let operationType: OperationType
     let amount: Double
-    let from: String
-    let to: String?
-    let category: String?
-    let date: String
+    let fromBanka: BankaType?
+    let fromIncome: IncomeType?
+    let toBanka: BankaType?
+    let toCategory: CategoryType?
+    let date: Date
 }

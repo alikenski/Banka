@@ -12,7 +12,7 @@ struct OnboardingOneScreen: View {
     
     var body: some View {
         ZStack {
-            Color.cBlack.ignoresSafeArea(.all)
+            Color.cBackDark.ignoresSafeArea(.all)
             VStack(alignment: .leading) {
                 NavigationLink(destination: OnboardingTwoScreen(), isActive: $showNextScreen) {
                     EmptyView()
@@ -31,18 +31,18 @@ struct OnboardingOneScreen: View {
                         .padding(.trailing, 12)
                     Text("1/3")
                         .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(Color.cGray)
+                        .foregroundColor(Color.cWhite)
                 }
                 .padding(.bottom, 24)
                 
                 TextLogo()
                 Spacer()
                 
-                Text("Управлять вашими расходами не так сложно как вы представляете")
+                Text("onb_one_title")
                     .font(.system(size: 32, weight: .black))
                     .foregroundColor(Color.cWhite)
-                    .padding(.bottom, 24)
-                Text("Это еще проще вместе с Banka")
+                    .padding(.bottom, 12)
+                Text("onb_one_description")
                     .font(.system(size: 32, weight: .medium))
                     .foregroundColor(Color.cWhite)
                 Spacer()
@@ -50,7 +50,9 @@ struct OnboardingOneScreen: View {
                 Button {
                     showNextScreen = true
                 } label: {
-                    RoundedButton(title: "onb_one_choose_currency")
+                    RoundedButton(title: "onb_one_choose_currency",
+                                  background: .cPrimary,
+                                  foregroundColor: .cWhite)
                 }
             }
             .padding(16)

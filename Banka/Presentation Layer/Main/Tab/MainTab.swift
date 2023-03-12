@@ -12,8 +12,8 @@ struct MainTab: View {
     
     init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor(Color.cGray)
-        UITabBar.appearance().backgroundColor = UIColor(Color.cDarkGray)
-        UITabBar.appearance().barTintColor = UIColor(Color.cDarkGray)
+        UITabBar.appearance().backgroundColor = UIColor(Color.cBackLight)
+        UITabBar.appearance().barTintColor = UIColor(Color.cBackLight)
         UITabBar.appearance().tintColor = UIColor(Color.cBlack)
         UITabBar.appearance().isTranslucent = true
     }
@@ -29,6 +29,11 @@ struct MainTab: View {
                 .tag(2)
                 .tabItem {
                     Label("История", systemImage: "newspaper.fill")
+                }
+            DepositRootScreen()
+                .tag(3)
+                .tabItem {
+                    Label("Депозит", systemImage: "shield.fill")
                 }
             ProfileRootScreen()
                 .tag(4)

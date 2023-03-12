@@ -8,7 +8,7 @@
 import Foundation
 
 protocol BankaRepositoryProtocol {
-    func updateBankas(list: [BankaModel], from: String, completion: (() -> Void)?)
+    func updateBankas(list: [BankaModel], from: IncomeType, completion: (() -> Void)?)
     func getBankas() -> [BankaModel]
     func makeOutcome(from: BankaModel,
                      amount: Int,

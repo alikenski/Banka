@@ -13,7 +13,7 @@ struct IncomeScreen: View {
     
     var body: some View {
         ZStack {
-            Color.cBlack.ignoresSafeArea(.all)
+            Color.cBackDark.ignoresSafeArea(.all)
             VStack(alignment: .leading) {
                 Text("Общая сумма")
                     .font(.system(size: 16, weight: .black))
@@ -42,7 +42,7 @@ struct IncomeScreen: View {
                                 } label: {
                                     Text(income.title)
                                         .font(.system(size: 16))
-                                        .foregroundColor(income == viewModel.choosenIncomeType ? .cBlue : .cWhite)
+                                        .foregroundColor(income == viewModel.choosenIncomeType ? .cPrimary : .cGray)
                                 }
                             }
                         }
@@ -62,7 +62,7 @@ struct IncomeScreen: View {
                         Button {
                             viewModel.saveInDB()
                         } label: {
-                            RoundedButton(title: "Сохранить")
+                            RoundedButton(title: "Сохранить", background: .cPrimary, foregroundColor: .cWhite)
                         }
                         .padding(.bottom, 16)
                     }

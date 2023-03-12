@@ -12,21 +12,7 @@ import RealmSwift
 
 class CategoryStorage {
     private var dataBase: Realm
-    private let defaultCategories = [
-        CategoryModel(id: 1, title: "Продукты", icon: "takeoutbag.and.cup.and.straw.fill"),
-        CategoryModel(id: 2, title: "Лекарства", icon: "pills.fill"),
-        CategoryModel(id: 3, title: "Кредит", icon: "percent"),
-        CategoryModel(id: 4, title: "Авто", icon: "car.fill"),
-        CategoryModel(id: 5, title: "Платежи", icon: "creditcard.fill"),
-        CategoryModel(id: 6, title: "Одежда", icon: "tshirt.fill"),
-        CategoryModel(id: 7, title: "Транспорт", icon: "bus.fill"),
-        CategoryModel(id: 8, title: "Квартира", icon: "house.lodge.fill"),
-        CategoryModel(id: 9, title: "Ребенок", icon: "stroller.fill"),
-        CategoryModel(id: 10, title: "Образование", icon: "graduationcap.fill"),
-        CategoryModel(id: 11, title: "Подарки", icon: "gift.fill"),
-        CategoryModel(id: 12, title: "Благое дело", icon: "heart.fill"),
-        CategoryModel(id: 13, title: "Гулянка", icon: "theatermasks.fill")
-    ]
+    private let defaultCategories = cDefaultCategories
     
     init() {
         let realmUrl = try! FileManager.default.url(
@@ -51,7 +37,7 @@ class CategoryStorage {
                 let realmCategory = RCategoryModel()
                 
                 realmCategory.id = banka.id
-                realmCategory.title = banka.title
+                realmCategory.type = banka.type
                 realmCategory.icon = banka.icon
                 
                 DispatchQueue.main.async {
@@ -75,8 +61,8 @@ extension CategoryStorage: CategoryRepositoryProtocol {
         
         converted = result.map { current in
             CategoryModel(id: current.id,
-                          title: current.title,
-                          icon: current.icon)
+                          icon: current.icon,
+                          type: current.type)
         }
         
         return converted

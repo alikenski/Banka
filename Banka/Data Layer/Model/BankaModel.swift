@@ -9,7 +9,7 @@ import Foundation
 
 struct BankaModel: Codable, Hashable, Identifiable {
     let id: Int
-    let title: String
     var amount: Double
     let percent: Double
+    let type: BankaType
 }

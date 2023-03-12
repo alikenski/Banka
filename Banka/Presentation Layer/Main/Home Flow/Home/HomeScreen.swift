@@ -19,7 +19,7 @@ struct HomeScreen: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            Color.cBlack.ignoresSafeArea(.all)
+            Color.cBackDark.ignoresSafeArea(.all)
             VStack(alignment: .leading) {
                 headerView
                 ScrollView(showsIndicators: false) {
@@ -63,7 +63,7 @@ struct HomeScreen: View {
                     .foregroundColor(.cWhite)
                 Text("\(viewModel.totalAmount.toZero)\(userDefaults.currentCurrency)")
                     .font(.system(size: 30, weight: .black, design: .monospaced))
-                    .foregroundColor(.cBlue)
+                    .foregroundColor(.cWhite)
                     .padding(.bottom, 16)
                 HStack {
                     NavigationLink {
@@ -92,7 +92,7 @@ struct HomeScreen: View {
             .padding(.all, 16)
             Spacer()
         }
-        .background(Color.cDarkGray)
+        .background(Color.cBackLight)
         .cornerRadius(16)
     }
 }

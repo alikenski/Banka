@@ -11,14 +11,7 @@ import Combine
 class IncomeVM: ObservableObject {
     @Published var amount: String = ""
     @Published var choosenIncomeType: IncomeType?
-    @Published var bankaList: [BankaModel] = [
-        BankaModel(id: 1, title: "Необходимое", amount: 0, percent: 55),
-        BankaModel(id: 2, title: "Развлечение", amount: 0, percent: 10),
-        BankaModel(id: 3, title: "Инвестиция", amount: 0, percent: 10),
-        BankaModel(id: 4, title: "Образование", amount: 0, percent: 10),
-        BankaModel(id: 5, title: "Резерв", amount: 0, percent: 10),
-        BankaModel(id: 6, title: "Благое дело", amount: 0, percent: 5)
-    ]
+    @Published var bankaList: [BankaModel] = cDefaultBankas
     @Published var toast: Toast? = nil
     
     private var bankaStorage = BankaStorage()
@@ -57,7 +50,7 @@ class IncomeVM: ObservableObject {
             return
         }
         
-        bankaStorage.updateBankas(list: bankaList, from: choosenIncomeType.title) { [weak self] in
+        bankaStorage.updateBankas(list: bankaList, from: choosenIncomeType) { [weak self] in
             self?.dismissPublisher.send(true)
         }
     }

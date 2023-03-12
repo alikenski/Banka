@@ -12,8 +12,9 @@ class RHistoryModel: RealmSwiftObject {
     @Persisted(primaryKey: true) var id: String
     @Persisted var operationType: OperationType
     @Persisted var amount: Double
-    @Persisted var from: String
-    @Persisted var to: String?
-    @Persisted var category: String?
-    @Persisted var date: String
+    @Persisted var fromBanka: BankaType?
+    @Persisted var fromIncome: IncomeType?
+    @Persisted var toBanka: BankaType?
+    @Persisted var toCategory: CategoryType?
+    @Persisted var date: Date
 }

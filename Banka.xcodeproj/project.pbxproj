@@ -31,15 +31,20 @@
 		C22FF74C2939163F009E768C /* OnboardingTwoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22FF72D29391126009E768C /* OnboardingTwoVM.swift */; };
 		C22FF74D2939163F009E768C /* OnboardingTwoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22FF72E29391126009E768C /* OnboardingTwoScreen.swift */; };
 		C22FF74E29391666009E768C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22FF71729391126009E768C /* Colors.xcassets */; };
+		C24CA05D29BE2FE1002C9E0C /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CA05C29BE2FE1002C9E0C /* CategoryType.swift */; };
 		C252D6032964B28300D4AEE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C252D6022964B28300D4AEE3 /* LaunchScreen.storyboard */; };
+		C254711C29A3A82B004BBA5A /* DepositAddScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C254711B29A3A82B004BBA5A /* DepositAddScreen.swift */; };
+		C254711E29A3A835004BBA5A /* DepositAddVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C254711D29A3A835004BBA5A /* DepositAddVM.swift */; };
+		C258EB3D29A789A9002E2350 /* BankaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258EB3C29A789A9002E2350 /* BankaType.swift */; };
+		C258EB4029A78BAD002E2350 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C258EB3F29A78BAD002E2350 /* Constants.swift */; };
 		C25E968B29392BD2002791D6 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E968A29392BD2002791D6 /* HomeVM.swift */; };
 		C25E968D29392BEA002791D6 /* HomeRootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E968C29392BEA002791D6 /* HomeRootScreen.swift */; };
 		C25E969029392C62002791D6 /* IncomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E968F29392C62002791D6 /* IncomeScreen.swift */; };
 		C25E969329392C7D002791D6 /* OutcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E969229392C7D002791D6 /* OutcomeScreen.swift */; };
 		C25E969829393132002791D6 /* HistoryListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E969729393132002791D6 /* HistoryListScreen.swift */; };
 		C25E969B29393145002791D6 /* HistoryRootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E969A29393145002791D6 /* HistoryRootScreen.swift */; };
-		C25E969F293931F2002791D6 /* PurchaseListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E969E293931F2002791D6 /* PurchaseListScreen.swift */; };
-		C25E96A1293931FD002791D6 /* PurchaseRootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E96A0293931FD002791D6 /* PurchaseRootScreen.swift */; };
+		C25E969F293931F2002791D6 /* DepositListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E969E293931F2002791D6 /* DepositListScreen.swift */; };
+		C25E96A1293931FD002791D6 /* DepositRootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E96A0293931FD002791D6 /* DepositRootScreen.swift */; };
 		C25E96A429393234002791D6 /* ProfileRootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E96A329393234002791D6 /* ProfileRootScreen.swift */; };
 		C25E96A729393242002791D6 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E96A629393242002791D6 /* ProfileScreen.swift */; };
 		C2662B7929826A6A00EE3F51 /* CircleIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2662B7829826A6A00EE3F51 /* CircleIconButton.swift */; };
@@ -84,7 +89,6 @@
 		186539A428D8CBC500A670E7 /* BankaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankaApp.swift; sourceTree = "<group>"; };
 		186539A828D8CBC600A670E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		186539AB28D8CBC600A670E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1870DF0028E71825007F609E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		18A4A5DB28EC4E7F00B80147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C22FF71029391126009E768C /* TextField+Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Modifier.swift"; sourceTree = "<group>"; };
 		C22FF71229391126009E768C /* Color+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Assets.swift"; sourceTree = "<group>"; };
@@ -106,15 +110,22 @@
 		C22FF7322939112E009E768C /* DomainLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainLayer.swift; sourceTree = "<group>"; };
 		C22FF73929391137009E768C /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		C22FF73A29391137009E768C /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
+		C24CA05C29BE2FE1002C9E0C /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
+		C24CA05F29BE4190002C9E0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C24CA06029BE4246002C9E0C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C252D6022964B28300D4AEE3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C254711B29A3A82B004BBA5A /* DepositAddScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositAddScreen.swift; sourceTree = "<group>"; };
+		C254711D29A3A835004BBA5A /* DepositAddVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositAddVM.swift; sourceTree = "<group>"; };
+		C258EB3C29A789A9002E2350 /* BankaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankaType.swift; sourceTree = "<group>"; };
+		C258EB3F29A78BAD002E2350 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C25E968A29392BD2002791D6 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		C25E968C29392BEA002791D6 /* HomeRootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRootScreen.swift; sourceTree = "<group>"; };
 		C25E968F29392C62002791D6 /* IncomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeScreen.swift; sourceTree = "<group>"; };
 		C25E969229392C7D002791D6 /* OutcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeScreen.swift; sourceTree = "<group>"; };
 		C25E969729393132002791D6 /* HistoryListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListScreen.swift; sourceTree = "<group>"; };
 		C25E969A29393145002791D6 /* HistoryRootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRootScreen.swift; sourceTree = "<group>"; };
-		C25E969E293931F2002791D6 /* PurchaseListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseListScreen.swift; sourceTree = "<group>"; };
-		C25E96A0293931FD002791D6 /* PurchaseRootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRootScreen.swift; sourceTree = "<group>"; };
+		C25E969E293931F2002791D6 /* DepositListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositListScreen.swift; sourceTree = "<group>"; };
+		C25E96A0293931FD002791D6 /* DepositRootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositRootScreen.swift; sourceTree = "<group>"; };
 		C25E96A329393234002791D6 /* ProfileRootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRootScreen.swift; sourceTree = "<group>"; };
 		C25E96A629393242002791D6 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		C2662B7829826A6A00EE3F51 /* CircleIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleIconButton.swift; sourceTree = "<group>"; };
@@ -130,7 +141,6 @@
 		C278AD36298978A500850339 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		C278AD382989798300850339 /* HistoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVM.swift; sourceTree = "<group>"; };
 		C278AD3A29897F5400850339 /* HistoryBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryBlock.swift; sourceTree = "<group>"; };
-		C278AD3C2989A03500850339 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C27ECC68297C76A70065EB9F /* BankaStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankaStorage.swift; sourceTree = "<group>"; };
 		C27ECC6A297C76B60065EB9F /* RBankaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBankaModel.swift; sourceTree = "<group>"; };
 		C27ECC6C297C792B0065EB9F /* HistoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStorage.swift; sourceTree = "<group>"; };
@@ -194,6 +204,7 @@
 				C22FF72F2939112E009E768C /* Domain Layer */,
 				C22FF70D29391126009E768C /* Presentation Layer */,
 				C275AEBB296C845F0085D3C3 /* Extensions */,
+				C258EB3E29A78B80002E2350 /* Constants */,
 				186539AA28D8CBC600A670E7 /* Preview Content */,
 				C2A0CF112975D93B0037A16B /* Realm */,
 				18A4A5D728EC4E1E00B80147 /* Resources */,
@@ -313,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				C25E96A229393222002791D6 /* Profile Flow */,
-				C25E969C29393198002791D6 /* Purchase Flow */,
+				C25E969C29393198002791D6 /* Deposit Flow */,
 				C25E9694293930E2002791D6 /* History Flow */,
 				C22FF72329391126009E768C /* Home Flow */,
 				C22FF72529391126009E768C /* Tab */,
@@ -446,6 +457,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C254711A29A3A81B004BBA5A /* Deposit Add */ = {
+			isa = PBXGroup;
+			children = (
+				C254711B29A3A82B004BBA5A /* DepositAddScreen.swift */,
+				C254711D29A3A835004BBA5A /* DepositAddVM.swift */,
+			);
+			path = "Deposit Add";
+			sourceTree = "<group>";
+		};
+		C258EB3E29A78B80002E2350 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C258EB3F29A78BAD002E2350 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		C25E968929392BBE002791D6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,21 +519,22 @@
 			path = "History List";
 			sourceTree = "<group>";
 		};
-		C25E969C29393198002791D6 /* Purchase Flow */ = {
+		C25E969C29393198002791D6 /* Deposit Flow */ = {
 			isa = PBXGroup;
 			children = (
-				C25E969D293931BA002791D6 /* Purchase List */,
-				C25E96A0293931FD002791D6 /* PurchaseRootScreen.swift */,
+				C254711A29A3A81B004BBA5A /* Deposit Add */,
+				C25E969D293931BA002791D6 /* Deposit List */,
+				C25E96A0293931FD002791D6 /* DepositRootScreen.swift */,
 			);
-			path = "Purchase Flow";
+			path = "Deposit Flow";
 			sourceTree = "<group>";
 		};
-		C25E969D293931BA002791D6 /* Purchase List */ = {
+		C25E969D293931BA002791D6 /* Deposit List */ = {
 			isa = PBXGroup;
 			children = (
-				C25E969E293931F2002791D6 /* PurchaseListScreen.swift */,
+				C25E969E293931F2002791D6 /* DepositListScreen.swift */,
 			);
-			path = "Purchase List";
+			path = "Deposit List";
 			sourceTree = "<group>";
 		};
 		C25E96A229393222002791D6 /* Profile Flow */ = {
@@ -571,8 +600,10 @@
 		C278AD352989134400850339 /* Type */ = {
 			isa = PBXGroup;
 			children = (
+				C258EB3C29A789A9002E2350 /* BankaType.swift */,
 				C27ECC72297C7A150065EB9F /* OperationType.swift */,
 				C2A0CF0F2975AA230037A16B /* IncomeType.swift */,
+				C24CA05C29BE2FE1002C9E0C /* CategoryType.swift */,
 			);
 			path = Type;
 			sourceTree = "<group>";
@@ -664,6 +695,7 @@
 			knownRegions = (
 				en,
 				ru,
+				Base,
 			);
 			mainGroup = 1865399828D8CBC500A670E7;
 			packageReferences = (
@@ -717,13 +749,15 @@
 				C22FF7412939163F009E768C /* TextLogo.swift in Sources */,
 				C2B4A8A82987029B007861A2 /* ToastView.swift in Sources */,
 				C25E969829393132002791D6 /* HistoryListScreen.swift in Sources */,
-				C25E96A1293931FD002791D6 /* PurchaseRootScreen.swift in Sources */,
+				C25E96A1293931FD002791D6 /* DepositRootScreen.swift in Sources */,
 				C22FF7422939163F009E768C /* RoundedButton.swift in Sources */,
 				C2662B7E29826DD900EE3F51 /* TransferVM.swift in Sources */,
 				C22FF7432939163F009E768C /* AppCoordinator.swift in Sources */,
 				C278AD342989133D00850339 /* HistoryModel.swift in Sources */,
+				C258EB4029A78BAD002E2350 /* Constants.swift in Sources */,
 				C25E96A429393234002791D6 /* ProfileRootScreen.swift in Sources */,
 				C25E968B29392BD2002791D6 /* HomeVM.swift in Sources */,
+				C254711C29A3A82B004BBA5A /* DepositAddScreen.swift in Sources */,
 				C22FF7442939163F009E768C /* RegistrationScreen.swift in Sources */,
 				C2662B8029826F6B00EE3F51 /* NavigationBar+Modifier.swift in Sources */,
 				C278AD37298978A500850339 /* Date+.swift in Sources */,
@@ -739,6 +773,7 @@
 				C25E969029392C62002791D6 /* IncomeScreen.swift in Sources */,
 				C278AD392989798300850339 /* HistoryVM.swift in Sources */,
 				C22FF7462939163F009E768C /* RestoreScreen.swift in Sources */,
+				C24CA05D29BE2FE1002C9E0C /* CategoryType.swift in Sources */,
 				C2B4A8AC298703DB007861A2 /* View+Toast.swift in Sources */,
 				C2662B842983033400EE3F51 /* RCategoryModel.swift in Sources */,
 				C25E96A729393242002791D6 /* ProfileScreen.swift in Sources */,
@@ -747,8 +782,9 @@
 				C22FF7482939163F009E768C /* HomeScreen.swift in Sources */,
 				C275AEBD296C847D0085D3C3 /* Double+.swift in Sources */,
 				C22FF7492939163F009E768C /* MainTab.swift in Sources */,
+				C254711E29A3A835004BBA5A /* DepositAddVM.swift in Sources */,
 				C278AD3B29897F5400850339 /* HistoryBlock.swift in Sources */,
-				C25E969F293931F2002791D6 /* PurchaseListScreen.swift in Sources */,
+				C25E969F293931F2002791D6 /* DepositListScreen.swift in Sources */,
 				C2752964298825780001FBB1 /* UserDefaultWrapper.swift in Sources */,
 				C25E969329392C7D002791D6 /* OutcomeScreen.swift in Sources */,
 				C22FF74A2939163F009E768C /* OnboardingRootScreen.swift in Sources */,
@@ -760,6 +796,7 @@
 				C22FF74D2939163F009E768C /* OnboardingTwoScreen.swift in Sources */,
 				C27ECC6F297C793A0065EB9F /* HistoryRepositoryProtocol.swift in Sources */,
 				C2662B7C29826DD100EE3F51 /* TransferScreen.swift in Sources */,
+				C258EB3D29A789A9002E2350 /* BankaType.swift in Sources */,
 				186539A528D8CBC500A670E7 /* BankaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -770,8 +807,8 @@
 		1870DF0128E71825007F609E /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1870DF0028E71825007F609E /* en */,
-				C278AD3C2989A03500850339 /* ru */,
+				C24CA05F29BE4190002C9E0C /* en */,
+				C24CA06029BE4246002C9E0C /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

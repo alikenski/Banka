@@ -14,7 +14,7 @@ struct OnboardingTwoScreen: View {
     
     var body: some View {
         ZStack {
-            Color.cBlack.ignoresSafeArea(.all)
+            Color.cBackDark.ignoresSafeArea(.all)
             VStack(alignment: .leading) {
                 NavigationLink(destination: OnboardingThreeScreen(), isActive: $showNextScreen) {
                     EmptyView()
@@ -36,19 +36,19 @@ struct OnboardingTwoScreen: View {
                     
                     Text("2/3")
                         .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(Color.cGray)
+                        .foregroundColor(Color.cWhite)
                 }
                 .padding(.bottom, 24)
                 
                 TextLogo()
                 Spacer()
                 
-                Text("Выберите валюту для дальнейшей работы с ней")
+                Text("onb_two_title")
                     .font(.system(size: 32, weight: .black))
                     .foregroundColor(.cWhite)
                     .padding(.bottom, 8)
                 
-                Picker("Выберите валюту", selection: $viewModel.choosenCurrency) {
+                Picker("", selection: $viewModel.choosenCurrency) {
                     ForEach(viewModel.currencyList, id: \.self) {
                         Text($0.fullName)
                             .foregroundColor(Color.cWhite)
@@ -60,18 +60,19 @@ struct OnboardingTwoScreen: View {
                 
                 HStack {
                     Spacer()
-                    Text("Позже можно изменить в настройках приложения")
+                    Text("onb_two_description")
                         .foregroundColor(.cGray)
-                        .font(.system(size: 12))
+                        .font(.system(size: 12, weight: .medium))
                     Spacer()
                 }
-               
                 
                 Button {
                     viewModel.chooseCurrency()
                     showNextScreen = true
                 } label: {
-                    RoundedButton(title: "Сохранить и дальше")
+                    RoundedButton(title: "onb_two_save",
+                                  background: .cPrimary,
+                                  foregroundColor: .cWhite)
                 }
             }
             .padding(16)

@@ -19,7 +19,7 @@ struct OnboardingThreeScreen: View {
     
     var body: some View {
         ZStack {
-            Color.cBlack.ignoresSafeArea(.all)
+            Color.cBackDark.ignoresSafeArea(.all)
             VStack(alignment: .leading) {
                 HStack {
                     Circle()
@@ -37,7 +37,7 @@ struct OnboardingThreeScreen: View {
                     
                     Text("3/3")
                         .font(.system(size: 14, weight: .bold))
-                        .foregroundColor(Color.cGray)
+                        .foregroundColor(Color.cWhite)
                 }
                 .padding(.bottom, 24)
                 
@@ -47,13 +47,13 @@ struct OnboardingThreeScreen: View {
                 LazyVGrid(columns: gridItemLayout, spacing: 8) {
                     ZStack(alignment: .top) {
                         RoundedRectangle(cornerRadius: 16)
-                            .fill(Color.cDarkGray)
+                            .fill(Color.cBackLight)
                         VStack(alignment: .center) {
-                            Text("Необходимое")
+                            Text("onb_three_necessary_title")
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 16, weight: .bold))
                                 .padding(.bottom, 2)
-                            Text("Продукты, коммунальные платежи, кредиты, лекарства, проезд, медицина и т.п.")
+                            Text("onb_three_necessary_description")
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 12, weight: .regular))
@@ -64,13 +64,13 @@ struct OnboardingThreeScreen: View {
                     
                     ZStack(alignment: .top) {
                         RoundedRectangle(cornerRadius: 16)
-                            .fill(Color.cDarkGray)
+                            .fill(Color.cBackLight)
                         VStack(alignment: .center) {
-                            Text("Развлечение")
+                            Text("onb_three_entertainment_title")
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 16, weight: .bold))
                                 .padding(.bottom, 2)
-                            Text("Массаж, кафе, ресторан, концерт, театр, компьютерный клуб, кальян и т.п.")
+                            Text("onb_three_entertainment_description")
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 12, weight: .regular))
@@ -81,13 +81,13 @@ struct OnboardingThreeScreen: View {
                     
                     ZStack(alignment: .top) {
                         RoundedRectangle(cornerRadius: 16)
-                            .fill(Color.cDarkGray)
+                            .fill(Color.cBackLight)
                         VStack(alignment: .center) {
-                            Text("Инвестиция")
+                            Text("onb_three_investment_title")
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 16, weight: .bold))
                                 .padding(.bottom, 2)
-                            Text("Используется для инвестиций и получения пассивного дохода")
+                            Text("onb_three_investment_description")
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 12, weight: .regular))
@@ -98,13 +98,13 @@ struct OnboardingThreeScreen: View {
                     
                     ZStack(alignment: .top) {
                         RoundedRectangle(cornerRadius: 16)
-                            .fill(Color.cDarkGray)
+                            .fill(Color.cBackLight)
                         VStack(alignment: .center) {
-                            Text("Образование")
+                            Text("onb_three_education_title")
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 16, weight: .bold))
                                 .padding(.bottom, 2)
-                            Text("Оплата обучения, курсов, мастер-классов, тренингов, книг, онлайн курсов и т.п.")
+                            Text("onb_three_education_description")
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 12, weight: .regular))
@@ -115,13 +115,13 @@ struct OnboardingThreeScreen: View {
                     
                     ZStack(alignment: .top) {
                         RoundedRectangle(cornerRadius: 16)
-                            .fill(Color.cDarkGray)
+                            .fill(Color.cBackLight)
                         VStack(alignment: .center) {
-                            Text("Резерв")
+                            Text("onb_three_reserve_title")
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 16, weight: .bold))
                                 .padding(.bottom, 2)
-                            Text("Финансовая подушка безопасности (резервный фонд) и как накопления на крупные расходы")
+                            Text("onb_three_reserve_description")
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 12, weight: .regular))
@@ -132,13 +132,13 @@ struct OnboardingThreeScreen: View {
                     
                     ZStack(alignment: .top) {
                         RoundedRectangle(cornerRadius: 16)
-                            .fill(Color.cDarkGray)
+                            .fill(Color.cBackLight)
                         VStack(alignment: .center) {
-                            Text("Благое дело")
+                            Text("onb_three_charity_title")
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 16, weight: .bold))
                                 .padding(.bottom, 2)
-                            Text("Использовать на цели благотворительности либо на подарки друзьям, близким, соседям")
+                            Text("onb_three_charity_description")
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.cWhite)
                                 .font(.system(size: 12, weight: .regular))
@@ -153,7 +153,7 @@ struct OnboardingThreeScreen: View {
                     userDefaults.isSeenOnboarding = true
                     appCoordinator.activeFlow = .main
                 } label: {
-                    RoundedButton(title: "Начать!")
+                    RoundedButton(title: "onb_three_start", background: .cPrimary, foregroundColor: .cWhite)
                 }
             }
             .padding(16)

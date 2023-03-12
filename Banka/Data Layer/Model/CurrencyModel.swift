@@ -17,24 +17,24 @@ public enum CurrencyModel: String, CaseIterable {
     case usd
     case eur
     
-    public var fullName: String {
+    public var fullName: LocalizedStringResource {
         switch self {
         case .kzt:
-            return "Казахстанский тенге"
+            return "currency_kzt"
         case .rub:
-            return "Российский рубль"
+            return "currency_rub"
         case .kgs:
-            return "Киргизский сом"
+            return "currency_kgs"
         case .uzs:
-            return "Узбекский сум"
+            return "currency_uzs"
         case .byn:
-            return "Белорусский рубль"
+            return "currency_byn"
         case .uah:
-            return "Украинская гривна"
+            return "currency_uah"
         case .usd:
-            return "Американский доллар"
+            return "currency_usd"
         case .eur:
-            return "Евро"
+            return "currency_eur"
         }
     }
     

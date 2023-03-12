@@ -15,12 +15,12 @@ struct BankaBlockLong: View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
                 HStack {
-                    Text(model.title)
-                        .foregroundColor(.cWhite)
+                    Text(model.type.title)
+                        .foregroundColor(model.type.color)
                         .font(.system(size: 18, weight: .medium))
                     Spacer()
                     Text("\(model.percent.toZero)%")
-                        .foregroundColor(.cBlue)
+                        .foregroundColor(.cGray)
                 }
                 
                 Text("\(model.amount.toZero)\(userDefaults.currentCurrency)")
@@ -30,7 +30,7 @@ struct BankaBlockLong: View {
             .padding(.all, 16)
             Spacer()
         }
-        .background(Color.cDarkGray)
+        .background(Color.cBackLight)
         .cornerRadius(16)
     }
 }

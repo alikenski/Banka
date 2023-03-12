@@ -10,6 +10,6 @@ import RealmSwift
 
 class RCategoryModel: RealmSwiftObject {
     @Persisted(primaryKey: true) var id: Int
-    @Persisted var title: String
     @Persisted var icon: String
+    @Persisted var type: CategoryType
 }

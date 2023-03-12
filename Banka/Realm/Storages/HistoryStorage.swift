@@ -35,9 +35,10 @@ extension HistoryStorage: HistoryRepositoryProtocol {
         realmHistory.id = history.id
         realmHistory.operationType = history.operationType
         realmHistory.amount = history.amount
-        realmHistory.from = history.from
-        realmHistory.to = history.to
-        realmHistory.category = history.category
+        realmHistory.fromBanka = history.fromBanka
+        realmHistory.fromIncome = history.fromIncome
+        realmHistory.toBanka = history.toBanka
+        realmHistory.toCategory = history.toCategory
         realmHistory.date = history.date
         
         
@@ -60,9 +61,10 @@ extension HistoryStorage: HistoryRepositoryProtocol {
             HistoryModel(id: current.id,
                          operationType: current.operationType,
                          amount: current.amount,
-                         from: current.from,
-                         to: current.to,
-                         category: current.category,
+                         fromBanka: current.fromBanka,
+                         fromIncome: current.fromIncome,
+                         toBanka: current.toBanka,
+                         toCategory: current.toCategory,
                          date: current.date)
         }
         

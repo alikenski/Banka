@@ -13,7 +13,8 @@ enum LaunchInstructor {
     static func setup() -> LaunchInstructor {
         let userDefaults: UserDefaultWrapper = .init()
         
-        switch userDefaults.isSeenOnboarding {
+//        switch userDefaults.isSeenOnboarding {
+        switch false {
         case false:
             return .onboarding
         case true:

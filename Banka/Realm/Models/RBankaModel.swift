@@ -10,7 +10,7 @@ import RealmSwift
 
 class RBankaModel: RealmSwiftObject {
     @Persisted(primaryKey: true) var id: Int
-    @Persisted var title: String
     @Persisted var percent: Double
     @Persisted var amount: Double
+    @Persisted var type: BankaType
 }

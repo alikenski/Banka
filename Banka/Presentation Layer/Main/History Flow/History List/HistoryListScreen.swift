@@ -13,7 +13,7 @@ struct HistoryListScreen: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
-            Color.cBlack.ignoresSafeArea(.all)
+            Color.cBackDark.ignoresSafeArea(.all)
             VStack(alignment: .leading) {
                 headerView
                 Spacer()

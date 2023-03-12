@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   Banka
 
@@ -6,3 +6,71 @@
   
 */
 
+// Название банок
+"Banka_necessary" = "Необходимое";
+"Banka_entertainment" = "Развлечение";
+"Banka_investment" = "Инвестиция";
+"Banka_education" = "Образование";
+"Banka_reserve" = "Резерв";
+"Banka_charity" = "Благое дело";
+
+// Название категорий дохода
+"Income_work" = "Работа";
+"Income_business" = "Бизнес";
+"Income_other" = "Другое";
+
+// Название категорий расхода
+"Outcome_products" = "Продукты";
+"Outcome_medications" = "Лекарства";
+"Outcome_credit" = "Кредит";
+"Outcome_auto" = "Авто";
+"Outcome_payments" = "Платежи";
+"Outcome_cloth" = "Одежда";
+"Outcome_transport" = "Транспорт";
+"Outcome_apartment" = "Квартира";
+"Outcome_child" = "Ребенок";
+"Outcome_education" = "Образование";
+"Outcome_charity" = "Благое дело";
+"Outcome_gift" = "Подарки";
+"Outcome_entertainment" = "Гулянка";
+
+// Валюты
+"currency_kzt" = "Казахстанский тенге";
+"currency_rub" = "Российский рубль";
+"currency_kgs" = "Киргизский сом";
+"currency_uzs" = "Узбекский сум";
+"currency_byn" = "Белорусский рубль";
+"currency_uah" = "Украинская гривна";
+"currency_usd" = "Американский доллар";
+"currency_eur" = "Евро";
+
+// Onboarding 1
+"onb_one_title" = "Управлять вашими расходами не так сложно как вы представляете";
+"onb_one_description" = "Это еще проще вместе с Banka";
+"onb_one_choose_currency" = "Выбрать валюту";
+
+// Onboarding 2
+"onb_two_title" = "Выберите валюту для дальнейшей работы с ней";
+"onb_two_description" = "Позже можно изменить в настройках приложения";
+"onb_two_save" = "Сохранить и дальше";
+
+// Onboarding 3
+"onb_three_necessary_title" = "Необходимое";
+"onb_three_necessary_description" = "Продукты, коммунальные платежи, кредиты, лекарства, проезд, медицина и т.п.";
+
+"onb_three_entertainment_title" = "Развлечение";
+"onb_three_entertainment_description" = "Массаж, кафе, ресторан, концерт, театр, компьютерный клуб, кальян и т.п.";
+
+"onb_three_investment_title" = "Инвестиция";
+"onb_three_investment_description" = "Используется для инвестиций и получения пассивного дохода";
+
+"onb_three_education_title" = "Образование";
+"onb_three_education_description" = "Оплата обучения, курсов, мастер-классов, тренингов, книг, онлайн курсов и т.п.";
+
+"onb_three_reserve_title" = "Резерв";
+"onb_three_reserve_description" = "Финансовая подушка безопасности (резервный фонд) и как накопления на крупные расходы";
+
+"onb_three_charity_title" = "Благое дело";
+"onb_three_charity_description" = "Использовать на цели благотворительности либо на подарки друзьям, близким, соседям";
+
+"onb_three_start" = "Начать!";

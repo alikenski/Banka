@@ -11,7 +11,7 @@ struct RoundedFieldModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding(12)
-            .background(Color.cDarkGray)
+            .background(Color.cBackLight)
             .cornerRadius(8)
             .foregroundColor(Color.cWhite)
             .font(Font.system(size: 16, weight: .regular))

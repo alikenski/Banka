@@ -10,14 +10,7 @@ import RealmSwift
 
 class BankaStorage {
     private var dataBase: Realm
-    private let defaultBankas = [
-        BankaModel(id: 1, title: "Необходимое", amount: 0, percent: 55),
-        BankaModel(id: 2, title: "Развлечение", amount: 0, percent: 10),
-        BankaModel(id: 3, title: "Инвестиция", amount: 0, percent: 10),
-        BankaModel(id: 4, title: "Образование", amount: 0, percent: 10),
-        BankaModel(id: 5, title: "Резерв", amount: 0, percent: 10),
-        BankaModel(id: 6, title: "Благое дело", amount: 0, percent: 5)
-    ]
+    private let defaultBankas = cDefaultBankas
     
     private let historyStorage = HistoryStorage()
     
@@ -44,9 +37,9 @@ class BankaStorage {
                 let realmBanka = RBankaModel()
                 
                 realmBanka.id = banka.id
-                realmBanka.title = banka.title
                 realmBanka.percent = banka.percent
                 realmBanka.amount = banka.amount
+                realmBanka.type = banka.type
                 
                 DispatchQueue.main.async {
                     do {
@@ -63,7 +56,7 @@ class BankaStorage {
 }
 
 extension BankaStorage: BankaRepositoryProtocol {
-    func updateBankas(list: [BankaModel], from: String, completion: (() -> Void)? = nil) {
+    func updateBankas(list: [BankaModel], from: IncomeType, completion: (() -> Void)? = nil) {
         list.forEach { banka in
             let result = dataBase.objects(RBankaModel.self)
                 .filter("id == \(banka.id)")
@@ -85,10 +78,11 @@ extension BankaStorage: BankaRepositoryProtocol {
         historyStorage.addHistory(history: HistoryModel(id: UUID().uuidString,
                                                         operationType: .income,
                                                         amount: totalAmount,
-                                                        from: from,
-                                                        to: nil,
-                                                        category: nil,
-                                                        date: Date().toDBString()))
+                                                        fromBanka: nil,
+                                                        fromIncome: from,
+                                                        toBanka: nil,
+                                                        toCategory: nil,
+                                                        date: Date()))
         
         completion?()
     }
@@ -99,9 +93,9 @@ extension BankaStorage: BankaRepositoryProtocol {
         
         converted = result.map { current in
             BankaModel(id: current.id,
-                       title: current.title,
                        amount: current.amount,
-                       percent: current.percent)
+                       percent: current.percent,
+                       type: current.type)
         }
         
         return converted
@@ -123,10 +117,11 @@ extension BankaStorage: BankaRepositoryProtocol {
         historyStorage.addHistory(history: HistoryModel(id: UUID().uuidString,
                                                         operationType: .outcome,
                                                         amount: Double(amount),
-                                                        from: from.title,
-                                                        to: nil,
-                                                        category: category.title,
-                                                        date: Date().toDBString()))
+                                                        fromBanka: from.type,
+                                                        fromIncome: nil,
+                                                        toBanka: nil,
+                                                        toCategory: category.type,
+                                                        date: Date()))
         
         completion?()
     }
@@ -158,11 +153,11 @@ extension BankaStorage: BankaRepositoryProtocol {
         historyStorage.addHistory(history: HistoryModel(id: UUID().uuidString,
                                                         operationType: .transfer,
                                                         amount: Double(amount),
-                                                        from: from.title,
-                                                        to: to.title,
-                                                        category: nil,
-                                                        date: Date().toDBString()))
-        
+                                                        fromBanka: from.type,
+                                                        fromIncome: nil,
+                                                        toBanka: to.type,
+                                                        toCategory: nil,
+                                                        date: Date()))
         completion?()
     }
 }

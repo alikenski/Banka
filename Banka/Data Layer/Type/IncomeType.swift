@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-enum IncomeType: String, CaseIterable {
+enum IncomeType: String, CaseIterable, Codable, PersistableEnum {
     case salary
     case business
     case other
@@ -23,14 +24,14 @@ enum IncomeType: String, CaseIterable {
         }
     }
     
-    var title: String {
+    var title: LocalizedStringResource {
         switch self {
         case .salary:
-            return "Зарплата"
+            return "Income_work"
         case .business:
-            return "Бизнес"
+            return "Income_business"
         case .other:
-            return "Другое"
+            return "Income_other"
         }
     }
 }

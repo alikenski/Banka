@@ -24,7 +24,7 @@ struct CircleIconButton: View {
             
             if let title {
                 Text(title)
-                    .foregroundColor(Color.cBlue)
+                    .foregroundColor(Color.cWhite)
                     .font(Font.system(size: 14))
             }
         }

@@ -59,12 +59,12 @@ struct LoginScreen: View {
                     Button("Регистрация") {
                         showRegistrationScreen = true
                     }
-                    .foregroundColor(Color.cGray)
+                    .foregroundColor(Color.cWhite)
                     Spacer()
                     Button("Забыл пароль?") {
                         showRestoreScreen = true
                     }
-                    .foregroundColor(Color.cGray)
+                    .foregroundColor(Color.cWhite)
                 }
                 .padding(.bottom, 32)
                 

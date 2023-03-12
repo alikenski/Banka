@@ -20,7 +20,7 @@ struct TransferScreen: View {
     
     var body: some View {
         ZStack {
-            Color.cBlack.ignoresSafeArea(.all)
+            Color.cBackDark.ignoresSafeArea(.all)
             VStack(alignment: .leading) {
                 
                 Text("Сколько перевести")
@@ -47,11 +47,11 @@ struct TransferScreen: View {
                                     viewModel.chooseBanka(from: item)
                                 } label: {
                                     VStack {
-                                        Text(item.title)
-                                            .foregroundColor(item == viewModel.fromBanka ? .cBlue : .cWhite)
+                                        Text(item.type.title)
+                                            .foregroundColor(item == viewModel.fromBanka ? .cPrimary : .cWhite)
                                             .font(.system(size: 12, weight: .black))
                                         Text("\(item.amount.toZero)\(userDefaults.currentCurrency)")
-                                            .foregroundColor(item == viewModel.fromBanka ? .cBlue : .cWhite)
+                                            .foregroundColor(item == viewModel.fromBanka ? .cPrimary : .cGray)
                                             .font(.system(size: 12))
                                     }
                                 }
@@ -69,11 +69,11 @@ struct TransferScreen: View {
                                     viewModel.chooseBanka(to: item)
                                 } label: {
                                     VStack {
-                                        Text(item.title)
-                                            .foregroundColor(item == viewModel.toBanka ? .cBlue : .cWhite)
+                                        Text(item.type.title)
+                                            .foregroundColor(item == viewModel.toBanka ? .cPrimary : .cWhite)
                                             .font(.system(size: 12, weight: .black))
                                         Text("\(item.amount.toZero)\(userDefaults.currentCurrency)")
-                                            .foregroundColor(item == viewModel.toBanka ? .cBlue : .cWhite)
+                                            .foregroundColor(item == viewModel.toBanka ? .cPrimary : .cGray)
                                             .font(.system(size: 12))
                                     }
                                 }
@@ -135,7 +135,7 @@ struct TransferScreen: View {
                         Button {
                             viewModel.saveInDB()
                         } label: {
-                            RoundedButton(title: "Сохранить")
+                            RoundedButton(title: "Сохранить", background: .cPrimary, foregroundColor: .cWhite)
                         }
                         .padding(.bottom, 16)
                     }
